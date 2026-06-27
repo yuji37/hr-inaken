@@ -382,33 +382,40 @@ address { font-style: normal; }
   .footer-links { grid-template-columns: 1fr; }
 }
 
-/* 文字サイズ調整ボタンのスタイル */
+/* 文字サイズ調整ボタンのスタイル (カプセル型) */
 .font-size-control {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  background: var(--paper);
-  padding: 4px;
-  border-radius: 6px;
-  border: 1px solid var(--line);
+  gap: 0; /* 隙間なし */
+  background: #faf8f5; /* 非常に薄いベージュ */
+  padding: 0;
+  border-radius: 30px; /* カプセル型 */
+  border: 1px solid #e2ded5;
+  overflow: hidden;
 }
 .font-size-btn {
   border: none;
   background: transparent;
-  color: var(--muted);
-  padding: 6px 12px;
+  color: #767064; /* 少し落ち着いたカラー */
+  padding: 6px 14px;
   font-size: 0.8125rem;
-  font-weight: 800;
-  border-radius: 4px;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
+}
+/* ボタン間に縦の区切り線を引く */
+.font-size-btn:not(:first-child) {
+  border-left: 1px solid #e2ded5;
+  border-radius: 0;
 }
 .font-size-btn:hover {
-  color: var(--ink);
+  background: rgba(0, 0, 0, 0.03);
+  color: #2c2924;
 }
 .font-size-btn.is-active {
-  color: #fff;
-  background: var(--green);
+  font-weight: 800; /* 太字 */
+  color: #1a1815;   /* 濃い黒 */
+  background: rgba(0, 0, 0, 0.05); /* 微妙に背景を濃くする */
 }
 
 /* スクロールアニメーション */
