@@ -987,6 +987,8 @@ address { font-style: normal; }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-height: 175px; /* 最小高さを確保して文字切れを防止 */
+  flex-shrink: 0;
 }
 
 .timeline-card:hover {
@@ -1048,6 +1050,7 @@ address { font-style: normal; }
   font-weight: 800;
   color: var(--ink);
   margin-bottom: 8px;
+  flex-shrink: 0;
 }
 
 .timeline-card p {
@@ -1055,6 +1058,7 @@ address { font-style: normal; }
   color: var(--muted);
   line-height: 1.6;
   margin: 0;
+  flex-shrink: 0;
 }
 
 .timeline-arrow {
