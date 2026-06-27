@@ -1448,3 +1448,15 @@ section.timeline-section ol.timeline-rich li.timeline-item div.timeline-card p {
   white-space: normal !important;
   display: block !important;
 }
+
+/* Keep STEP card decoration inside the card so the lower edge does not look clipped. */
+section.timeline-section ol.timeline-rich li.timeline-item div.timeline-card {
+  overflow: hidden !important;
+  padding-bottom: 34px !important;
+}
+
+section.timeline-section ol.timeline-rich li.timeline-item div.timeline-card .card-watermark {
+  bottom: 6px;
+  right: 18px;
+  font-size: clamp(4.8rem, 7vw, 6rem);
+}
