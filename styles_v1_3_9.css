@@ -970,6 +970,7 @@ address { font-style: normal; }
   position: relative;
   display: flex;
   flex-direction: column;
+  min-height: 230px; /* 親要素の最小高さを確保してGridアイテムの潰れを防止 */
 }
 
 .timeline-card {
