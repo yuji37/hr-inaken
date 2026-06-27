@@ -974,7 +974,7 @@ address { font-style: normal; }
 }
 
 .timeline-card {
-  flex: 1;
+  flex: 1 0 auto; /* 高さの崩壊を防ぐために flex-basis: auto / shrink: 0 にする */
   background: #fff;
   border: 1px solid var(--line);
   border-top: 4px solid var(--green);
@@ -987,7 +987,7 @@ address { font-style: normal; }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 175px; /* 最小高さを確保して文字切れを防止 */
+  min-height: 220px; /* 大サイズ表示時も文字が切れないように高さを引き上げ */
   flex-shrink: 0;
 }
 
