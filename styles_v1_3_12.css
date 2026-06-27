@@ -132,6 +132,59 @@ h3 { margin-bottom: 10px; font-size: 1.25rem; line-height: 1.35; }
   font-weight: 900;
 }
 .split-hero { display: grid; grid-template-columns: minmax(0,1fr) minmax(320px,470px); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.page-hero-with-aside {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  gap: clamp(26px, 4vw, 58px);
+  align-items: center;
+}
+.hero-aside-card {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  align-self: stretch;
+  min-height: 250px;
+  background: #fff;
+  border: 1px solid rgba(0, 97, 79, .14);
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(16,32,43,.10);
+}
+.hero-aside-media {
+  height: 170px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--pale);
+}
+.hero-aside-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-aside-copy {
+  position: relative;
+  padding: 20px 22px 22px;
+}
+.hero-aside-copy span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+.hero-aside-copy strong {
+  display: block;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.35;
+}
+.hero-aside-copy p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
 .summary-panel { padding: 30px; border-top: 5px solid var(--green); }
 .summary-panel strong { display: block; margin-bottom: 14px; font-size: 22px; }
 ul { margin: 0; padding-left: 1.1em; }
@@ -343,7 +396,7 @@ address { font-style: normal; }
   .menu-toggle { display: block; justify-self: end; }
   .nav { grid-column: 1 / -1; display: none; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0; padding-top: 10px; border-top: 1px solid var(--line); }
   .nav.is-open { display: grid; }
-  .hero-home, .intro-grid, .split-hero, .two-col, .worker-guide, .contact-layout, .company-profile { grid-template-columns: 1fr; }
+  .hero-home, .intro-grid, .split-hero, .page-hero-with-aside, .two-col, .worker-guide, .contact-layout, .company-profile { grid-template-columns: 1fr; }
   .service-hero-rich { grid-template-columns: 1fr; }
   .hero-home { min-height: auto; }
   .page-card-grid, .field-grid, .timeline, .compliance-list, .service-mini-strip, .rich-cards, .flow-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -357,6 +410,10 @@ address { font-style: normal; }
   .brand-copy strong { font-size: 16px; }
   .brand-mark { width: 38px; height: 38px; }
   .hero, .page-hero { padding: 40px 16px; }
+  .hero-aside-card { min-height: 0; }
+  .hero-aside-media { height: 150px; }
+  .hero-aside-copy { padding: 18px; }
+  .page-hero-with-aside > .sticker-badge { display: none; }
   h1 { max-width: 340px; font-size: 32px; line-height: 1.22; overflow-wrap: anywhere; }
   h2 { font-size: 28px; overflow-wrap: anywhere; }
   .hero-copy p, .page-hero p, .section-head p { max-width: 340px; font-size: 15px; overflow-wrap: anywhere; }
@@ -1375,9 +1432,9 @@ address { font-style: normal; }
 /* 4. カード内巨大透かし背景数字 (Watermark) */
 .card-watermark {
   position: absolute;
-  bottom: -15px;
-  right: 15px;
-  font-size: 6.5rem;
+  bottom: 8px !important;
+  right: 18px !important;
+  font-size: clamp(4.75rem, 7vw, 5.9rem) !important;
   font-weight: 900;
   color: rgba(0, 97, 79, 0.045);
   line-height: 1;
@@ -1391,7 +1448,16 @@ address { font-style: normal; }
 .feature-row article, 
 .page-card-grid a, 
 .field-grid article,
-.flow-grid article {
+.flow-grid article,
+.service-mini-strip article,
+.service-card-rich,
+.kpi-card,
+.guide-card,
+.plain-list,
+.compliance-list article,
+.profile-table,
+.contact-card,
+.contact-form {
   position: relative;
   overflow: hidden; /* はみ出し防止 */
 }
