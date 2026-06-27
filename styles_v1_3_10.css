@@ -1049,7 +1049,6 @@ address { font-style: normal; }
   font-weight: 800;
   color: var(--ink);
   margin-bottom: 8px;
-  flex-shrink: 0;
   width: 100%; /* 親要素の幅に合わせて折り返しを強制 */
   word-break: break-all;
   overflow-wrap: break-word;
@@ -1060,7 +1059,6 @@ address { font-style: normal; }
   color: var(--muted);
   line-height: 1.6;
   margin: 0;
-  flex-shrink: 0;
   width: 100%; /* 親要素の幅に合わせて折り返しを強制 */
   word-break: break-all;
   overflow-wrap: break-word;
