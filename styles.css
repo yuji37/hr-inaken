@@ -1395,3 +1395,9 @@ address { font-style: normal; }
 .flow-grid article:hover .card-watermark {
   color: rgba(196, 154, 61, 0.08); /* ホバー時にゴールド系の透かしに少し変化 */
 }
+
+/* 追加: タイムラインカード下の余白確保 */
+.timeline-rich {
+  margin-bottom: 54px;
+}
+
