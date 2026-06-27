@@ -1397,7 +1397,7 @@ address { font-style: normal; }
 }
 
 /* 追加: タイムラインカード下の余白確保 */
-.timeline-rich {
-  margin-bottom: 54px;
+.timeline-section {
+  padding-bottom: clamp(60px, 8vw, 110px) !important;
 }
 
