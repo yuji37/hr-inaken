@@ -987,7 +987,8 @@ address { font-style: normal; }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 230px; /* 最小高さを十分に確保 */
+  min-height: 280px; /* 最小高さを十分に確保 */
+  overflow: visible; /* テキスト見切れ防止 */
 }
 
 .timeline-card:hover {
@@ -1390,10 +1391,13 @@ address { font-style: normal; }
 .feature-row article, 
 .page-card-grid a, 
 .field-grid article,
-.timeline-card,
 .flow-grid article {
   position: relative;
   overflow: hidden; /* はみ出し防止 */
+}
+.timeline-card {
+  position: relative;
+  overflow: visible; /* テキスト見切れ防止: hiddenではなくvisibleにする */
 }
 .feature-row article:hover .card-watermark,
 .page-card-grid a:hover .card-watermark,
@@ -1414,10 +1418,11 @@ section.timeline-section ol.timeline-rich li.timeline-item {
 }
 
 section.timeline-section ol.timeline-rich li.timeline-item div.timeline-card {
-  min-height: 230px !important;
-  height: 100% !important;
+  min-height: 280px !important;
+  height: auto !important;
   display: flex !important;
   flex-direction: column !important;
+  overflow: visible !important;
 }
 
 section.timeline-section ol.timeline-rich li.timeline-item div.timeline-card h3 {
