@@ -74,8 +74,8 @@
           <label>電話番号<input name="tel"></label>
           <label>メールアドレス<input name="email" type="email"></label>
           <label>相談内容<textarea name="message" rows="6" required></textarea></label>
-          <button class="button primary" type="submit">メールを作成する</button>
-          <p class="form-note">送信ボタンでメールソフトが起動します。内容を確認して送信してください。</p>
+          <button class="button primary" type="submit" data-submit-btn>送信する</button>
+          <div class="form-status" data-form-status role="status" aria-live="polite" style="margin-top: 1rem; font-weight: bold; min-height: 1.5em; text-align: center;"></div>
         </form>
       </section>
     </main>
@@ -98,6 +98,7 @@
         TEL <a href="tel:0299945517">0299-94-5517</a>
       </address>
     </footer>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeDLzotAAAAAP1iaZhwhhdH1zfldN_fMGAuXQR6"></script>
     <script src="script_v1_3_27.js"></script>
   </body>
 </html>
