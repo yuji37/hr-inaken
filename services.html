@@ -1,4 +1,3 @@
-<!-- Version: v1.0.13 -->
 <!doctype html>
 <html lang="ja">
   <head>
@@ -6,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>サービス内容 | 稲建人材センター</title>
     <meta name="description" content="稲建人材センターの人材サービス内容。企業向け人材相談、外国人材の就業支援、就業後フォロー、法令確認を前提にした運用を紹介します。">
-    <link rel="stylesheet" href="styles_v1_3_14.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header" data-elevate>
       <a class="brand" href="index.html" aria-label="稲建人材センター ホーム">
-        <span class="brand-mark" aria-hidden="true">稲</span>
+        <img class="brand-logo" src="assets/inaken-logo.png" alt="INAKEN">
         <span class="brand-copy">
           <strong>稲建人材センター</strong>
           <small>INAKEN HUMAN RESOURCE CENTER</small>
@@ -28,36 +29,18 @@
         <a href="compliance.html"><span>法令遵守</span><small>COMPLIANCE</small></a>
         <a href="company.html"><span>会社案内</span><small>COMPANY</small></a>
         <a href="contact.html"><span>お問い合わせ</span><small>CONTACT</small></a>
+        <a href="https://yuji37.github.io/inaken/" class="nav-external"><span>稲建HP</span><small>INAKEN</small></a>
       </nav>
-      <div class="font-size-control" aria-label="文字サイズ調整">
-        <button type="button" class="font-size-btn" data-size="small" aria-label="文字サイズ小">A-</button>
-        <button type="button" class="font-size-btn is-active" data-size="medium" aria-label="文字サイズ中" aria-pressed="true">中</button>
-        <button type="button" class="font-size-btn" data-size="large" aria-label="文字サイズ大">A+</button>
-      </div>
       <a class="header-cta" href="contact.html">相談する</a>
     </header>
+    <div class="site-switch site-switch-inaken" aria-label="稲建ホームページへの案内">
+      <span>解体工事・産廃収集運搬は</span>
+      <strong>有限会社稲建</strong>
+      <a href="https://yuji37.github.io/inaken/">稲建ホームページへ</a>
+    </div>
     <main>
-      <section class="page-hero compact service-hero-rich" style="position: relative; overflow: hidden;">
-        <div class="floating-shapes">
-          <div class="shape green" style="left: 15%; width: 45px; height: 45px; animation-delay: 0s;"></div>
-          <div class="shape gold" style="left: 45%; width: 25px; height: 25px; animation-delay: -4s;"></div>
-          <div class="shape green" style="left: 75%; width: 55px; height: 55px; animation-delay: -8s;"></div>
-        </div>
-        <div class="sparkle-container" style="top: 15%; left: 6%;">
-          <svg class="sparkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>
-        </div>
-        
-        <!-- ポップなステッカーバッジ -->
-        <div class="sticker-badge green" style="top: 8%; left: 42%;">相談<br>無料</div>
-        <div class="sticker-badge" style="bottom: 10%; right: 48%;">茨城<br>全域</div>
-
-        <!-- 幾何学スタンプ -->
-        <div class="memphis-stamp plus spin" style="top: 12%; left: 35%;"></div>
-        <div class="memphis-stamp circle float-slow" style="top: 25%; right: 46%;"></div>
-        <div class="memphis-stamp waves" style="bottom: 8%; left: 10%;"></div>
-        <div class="memphis-stamp dots" style="top: 45%; left: 4%;"></div>
-        
-        <div class="service-hero-copy" style="position: relative; z-index: 2;">
+      <section class="page-hero compact service-hero-rich">
+        <div class="service-hero-copy">
           <span class="page-mark">SERVICE</span>
           <h1>人材相談から就業後フォローまで、現場に合わせて一貫対応。</h1>
           <p>企業の人手不足、外国人材の仕事探し、勤務開始後の定着まで。業務内容・在留資格・就業条件を確認し、無理のない形でつなぎます。</p>
@@ -67,160 +50,90 @@
             <div><strong>法令</strong><span>確認前提</span></div>
           </div>
         </div>
-        <figure class="service-hero-photo" style="position: relative; z-index: 2;">
+        <figure class="service-hero-photo">
           <img src="assets/service-collage.png" alt="人材相談、製造補助、物流補助、就業相談の様子">
         </figure>
       </section>
 
-      <section class="section service-dashboard bg-grid-pattern" style="position: relative;" data-animate>
-        <!-- 幾何学スタンプ -->
-        <div class="memphis-stamp plus float-slow" style="top: 5%; right: 4%;"></div>
-        <div class="memphis-stamp circle spin" style="bottom: 5%; left: 4%;"></div>
-        
-        <div class="service-mini-strip" style="position: relative; z-index: 2;">
+      <section class="section service-dashboard">
+        <div class="service-mini-strip">
           <article>
-            <div class="card-watermark">01</div>
             <span class="icon-pill people-icon" aria-hidden="true"></span>
             <strong>企業相談</strong>
             <p>人数・期間・業務条件を具体化</p>
           </article>
           <article>
-            <div class="card-watermark">02</div>
             <span class="icon-pill card-icon" aria-hidden="true"></span>
             <strong>在留資格</strong>
             <p>働ける範囲を事前に確認</p>
           </article>
           <article>
-            <div class="card-watermark">03</div>
             <span class="icon-pill chat-icon" aria-hidden="true"></span>
             <strong>就業説明</strong>
             <p>仕事内容・時間・通勤を共有</p>
           </article>
           <article>
-            <div class="card-watermark">04</div>
             <span class="icon-pill heart-icon" aria-hidden="true"></span>
             <strong>定着支援</strong>
             <p>勤務開始後も相談窓口を継続</p>
           </article>
         </div>
 
-        <div class="service-detail rich-cards" style="position: relative; z-index: 2;">
-          <article class="service-card-rich delay-1" data-animate>
-            <div class="card-watermark">01</div>
-            <div class="service-card-photo photo-left"><img src="assets/services_company_consultation.jpg" alt="企業向け人材相談の様子"></div>
+        <div class="service-detail rich-cards">
+          <article class="service-card-rich">
+            <div class="service-card-photo photo-left"><img src="assets/service-collage.png" alt="企業向け人材相談の様子"></div>
             <div class="service-card-body">
               <span class="service-number">01</span>
               <span class="icon-pill people-icon" aria-hidden="true"></span>
               <h2>企業向け人材相談</h2>
               <p>繁忙期、欠員、増産、作業量の変動に合わせ、必要人数・期間・勤務時間・業務条件を具体化します。</p>
-              <ul><li>受入れ業務の確認</li><li>必要人数と期間 of 確認</li><li>就業場所と指揮命令関係 of 確認</li><li>勤務開始後の連絡体制</li></ul>
+              <ul><li>受入れ業務の確認</li><li>必要人数と期間の確認</li><li>就業場所と指揮命令関係の確認</li><li>勤務開始後の連絡体制</li></ul>
             </div>
-          </article>
-          <article class="service-card-rich delay-2" data-animate>
-            <div class="card-watermark">02</div>
-            <div class="service-card-photo photo-center"><img src="assets/services_visa_check.jpg" alt="在留資格の確認の様子"></div>
+        </article>
+          <article class="service-card-rich">
+            <div class="service-card-photo photo-center"><img src="assets/service-collage.png" alt="外国人材の就業支援の様子"></div>
             <div class="service-card-body">
               <span class="service-number">02</span>
               <span class="icon-pill card-icon" aria-hidden="true"></span>
-              <h2>在留資格の事前確認</h2>
-              <p>在留カードの有効期限、就労可能範囲、資格外活動許可の有無などを事前に徹底確認し、法令違反を防止します。</p>
-              <ul><li>在留カード原本の確認</li><li>就労制限・資格外活動 of 確認</li><li>在留期間と更新スケジュールの管理</li><li>不法就労防止対策</li></ul>
+              <h2>外国人材の就業支援</h2>
+              <p>働きたい方の経験、希望条件、日本語レベル、在留資格を確認し、安心して続けられる就業につなげます。</p>
+              <ul><li>やさしい日本語での相談</li><li>在留カード・就労制限の確認</li><li>希望勤務地・勤務時間の確認</li><li>勤務開始前の職場説明</li></ul>
             </div>
-          </article>
-          <article class="service-card-rich delay-3" data-animate>
-            <div class="card-watermark">03</div>
-            <div class="service-card-photo photo-left"><img src="assets/services_work_orientation.jpg" alt="就業前の丁寧な説明の様子"></div>
+        </article>
+          <article class="service-card-rich">
+            <div class="service-card-photo photo-right"><img src="assets/service-collage.png" alt="就業後フォローの相談風景"></div>
             <div class="service-card-body">
               <span class="service-number">03</span>
-              <span class="icon-pill chat-icon" aria-hidden="true"></span>
-              <h2>就業前の丁寧な説明</h2>
-              <p>仕事内容、安全ルール、勤務時間、通勤方法などをやさしい日本語で丁寧に説明し、就業前の不安を解消します。</p>
-              <ul><li>やさしい日本語での説明</li><li>具体的な作業内容 of 共有</li><li>安全衛生・職場ルール of 事前指導</li><li>通勤経路や宿舎 of 確認</li></ul>
-            </div>
-          </article>
-          <article class="service-card-rich delay-4" data-animate>
-            <div class="card-watermark">04</div>
-            <div class="service-card-photo photo-right"><img src="assets/services_aftercare_support.jpg" alt="就業後の定着支援の様子"></div>
-            <div class="service-card-body">
-              <span class="service-number">04</span>
               <span class="icon-pill heart-icon" aria-hidden="true"></span>
-              <h2>就業後の定着支援</h2>
-              <p>勤務開始後のコミュニケーション状況や悩みごとを定期的に確認し、モチベーション維持と早期離職防止を図ります。</p>
-              <ul><li>勤怠・勤務状況 of 定期確認</li><li>企業側と外国人材 of 対話支援</li><li>生活面・メンタル面 of 相談窓口</li><li>労働環境改善へのアドバイス</li></ul>
+              <h2>就業後フォロー</h2>
+              <p>勤務開始後の困りごとや職場内コミュニケーションを確認し、早期離職を防ぐための支援を行います。</p>
+              <ul><li>勤怠・勤務状況の確認</li><li>企業側との定期連絡</li><li>生活・通勤面の相談受付</li><li>契約更新時の条件確認</li></ul>
             </div>
-          </article>
+        </article>
         </div>
       </section>
 
-      <section class="section job-fields bg-stripe-pattern" style="position: relative;" data-animate>
-        <!-- 幾何学スタンプ -->
-        <div class="memphis-stamp plus spin" style="top: 8%; right: 6%;"></div>
-        <div class="memphis-stamp double-circle float-slow" style="bottom: 12%; left: 5%;"></div>
-        
-        <div class="section-head" style="position: relative; z-index: 2;"><span class="page-mark">JOB FIELDS</span><h2>対応を想定する業務分野</h2><p>実際の対応可否は、法令・在留資格・業務内容を個別に確認します。</p></div>
-        <div class="field-grid illustrated" style="position: relative; z-index: 2;">
-          <article>
-            <div class="card-watermark">01</div>
-            <span class="icon-pill factory-icon" aria-hidden="true"></span>
-            <h3>製造補助</h3>
-            <p>検品、組立補助、梱包、ライン周辺作業。</p>
-          </article>
-          <article>
-            <div class="card-watermark">02</div>
-            <span class="icon-pill box-icon" aria-hidden="true"></span>
-            <h3>倉庫・物流補助</h3>
-            <p>仕分け、ピッキング、荷受け、出荷準備。</p>
-          </article>
-          <article>
-            <div class="card-watermark">03</div>
-            <span class="icon-pill clean-icon" aria-hidden="true"></span>
-            <h3>清掃・施設管理補助</h3>
-            <p>日常清掃、備品管理、施設内の軽作業。</p>
-          </article>
-          <article>
-            <div class="card-watermark">04</div>
-            <span class="icon-pill document-icon" aria-hidden="true"></span>
-            <h3>事務・通訳補助</h3>
-            <p>入力、書類整理、多言語コミュニケーション補助。</p>
-          </article>
+      <section class="section job-fields">
+        <div class="section-head"><span class="page-mark">JOB FIELDS</span><h2>対応を想定する業務分野</h2><p>実際の対応可否は、法令・在留資格・業務内容を個別に確認します。</p></div>
+        <div class="field-grid illustrated">
+          <article><span class="icon-pill factory-icon" aria-hidden="true"></span><h3>製造補助</h3><p>検品、組立補助、梱包、ライン周辺作業。</p></article>
+          <article><span class="icon-pill box-icon" aria-hidden="true"></span><h3>倉庫・物流補助</h3><p>仕分け、ピッキング、荷受け、出荷準備。</p></article>
+          <article><span class="icon-pill clean-icon" aria-hidden="true"></span><h3>清掃・施設管理補助</h3><p>日常清掃、備品管理、施設内の軽作業。</p></article>
+          <article><span class="icon-pill document-icon" aria-hidden="true"></span><h3>事務・通訳補助</h3><p>入力、書類整理、多言語コミュニケーション補助。</p></article>
         </div>
       </section>
 
-      <section class="section service-flow-band bg-grid-pattern" style="position: relative;" data-animate>
-        <!-- 幾何学スタンプ -->
-        <div class="memphis-stamp circle float-slow" style="top: 10%; left: 5%;"></div>
-        <div class="memphis-stamp waves" style="bottom: 10%; right: 6%;"></div>
-        
-        <div class="section-head" style="position: relative; z-index: 2;"><span class="page-mark">SERVICE FLOW</span><h2>相談から勤務開始後まで、段階ごとに支援。</h2></div>
-        <div class="flow-grid" style="position: relative; z-index: 2;">
-          <article>
-            <div class="card-watermark">01</div>
-            <strong>1</strong>
-            <h3>初回相談</h3>
-            <p>企業課題・希望条件をヒアリング。</p>
-          </article>
-          <article>
-            <div class="card-watermark">02</div>
-            <strong>2</strong>
-            <h3>条件確認</h3>
-            <p>業務内容・在留資格・勤務条件を確認。</p>
-          </article>
-          <article>
-            <div class="card-watermark">03</div>
-            <strong>3</strong>
-            <h3>マッチング</h3>
-            <p>経験や希望に合う職場を調整。</p>
-          </article>
-          <article>
-            <div class="card-watermark">04</div>
-            <strong>4</strong>
-            <h3>フォロー</h3>
-            <p>勤務後の定着と課題解消を支援。</p>
-          </article>
+      <section class="section service-flow-band">
+        <div class="section-head"><span class="page-mark">SERVICE FLOW</span><h2>相談から勤務開始後まで、段階ごとに支援。</h2></div>
+        <div class="flow-grid">
+          <article><strong>1</strong><h3>初回相談</h3><p>企業課題・希望条件をヒアリング。</p></article>
+          <article><strong>2</strong><h3>条件確認</h3><p>業務内容・在留資格・勤務条件を確認。</p></article>
+          <article><strong>3</strong><h3>マッチング</h3><p>経験や希望に合う職場を調整。</p></article>
+          <article><strong>4</strong><h3>フォロー</h3><p>勤務後の定着と課題解消を支援。</p></article>
         </div>
       </section>
 
-      <section class="section cta-band service-cta" data-animate>
+      <section class="section cta-band service-cta">
         <div>
           <span class="page-mark">CONTACT</span>
           <h2>必要人数・仕事内容が固まっていない段階でも相談できます。</h2>
@@ -233,11 +146,9 @@
       <div class="footer-main">
         <a class="footer-brand" href="index.html">稲建人材センター</a>
         <p>外国人材と地域企業を、法令確認を前提に適切な仕事へつなぐ人材サービス。</p>
-        <div>
-          <span id="staff-version-display" class="staff-version-display">v1.0.13</span>
-        </div>
       </div>
       <div class="footer-links">
+        <a href="https://yuji37.github.io/inaken/">有限会社稲建</a>
         <a href="services.html">サービス</a>
         <a href="companies.html">企業の方へ</a>
         <a href="workers.html">働きたい方へ</a>
@@ -250,13 +161,6 @@
         TEL <a href="tel:0299945517">0299-94-5517</a>
       </address>
     </footer>
-    <!-- フローティング相談ボタン (v1.0.4 追加) -->
-    <button class="floating-cta" onclick="location.href='contact.html'" aria-label="無料相談する">
-      <svg class="floating-cta-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
-      </svg>
-      <span>無料相談する</span>
-    </button>
-    <script src="script_v1_3_14.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

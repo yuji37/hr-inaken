@@ -1,4 +1,3 @@
-<!-- Version: v1.0.12 -->
 <!doctype html>
 <html lang="ja">
   <head>
@@ -6,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>お問い合わせ | 稲建人材センター</title>
     <meta name="description" content="稲建人材センターへのお問い合わせ。人材を探す企業、仕事を探す外国人の方からの相談を受け付けています。">
-    <link rel="stylesheet" href="styles_v1_3_14.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header" data-elevate>
       <a class="brand" href="index.html" aria-label="稲建人材センター ホーム">
-        <span class="brand-mark" aria-hidden="true">稲</span>
+        <img class="brand-logo" src="assets/inaken-logo.png" alt="INAKEN">
         <span class="brand-copy">
           <strong>稲建人材センター</strong>
           <small>INAKEN HUMAN RESOURCE CENTER</small>
@@ -28,59 +29,24 @@
         <a href="compliance.html"><span>法令遵守</span><small>COMPLIANCE</small></a>
         <a href="company.html"><span>会社案内</span><small>COMPANY</small></a>
         <a href="contact.html" aria-current="page"><span>お問い合わせ</span><small>CONTACT</small></a>
+        <a href="https://yuji37.github.io/inaken/" class="nav-external"><span>稲建HP</span><small>INAKEN</small></a>
       </nav>
-      <div class="font-size-control" aria-label="文字サイズ調整">
-        <button type="button" class="font-size-btn" data-size="small" aria-label="文字サイズ小">A-</button>
-        <button type="button" class="font-size-btn is-active" data-size="medium" aria-label="文字サイズ中" aria-pressed="true">中</button>
-        <button type="button" class="font-size-btn" data-size="large" aria-label="文字サイズ大">A+</button>
-      </div>
       <a class="header-cta" href="contact.html">相談する</a>
     </header>
+    <div class="site-switch site-switch-inaken" aria-label="稲建ホームページへの案内">
+      <span>解体工事・産廃収集運搬は</span>
+      <strong>有限会社稲建</strong>
+      <a href="https://yuji37.github.io/inaken/">稲建ホームページへ</a>
+    </div>
     <main>
-      <section class="page-hero contact-hero page-hero-with-aside" style="position: relative; overflow: hidden;">
-        <div class="floating-shapes">
-          <div class="shape green" style="left: 10%; width: 45px; height: 45px; animation-delay: 0s;"></div>
-          <div class="shape gold" style="left: 40%; width: 25px; height: 25px; animation-delay: -3s;"></div>
-          <div class="shape green" style="left: 70%; width: 55px; height: 55px; animation-delay: -6s;"></div>
-        </div>
-        <div class="sparkle-container" style="top: 25%; right: 8%;">
-          <svg class="sparkle" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>
-        </div>
-        
-        <!-- ポップなステッカーバッジ -->
-        <div class="sticker-badge green" style="top: 8%; left: 45%;">相談<br>無料</div>
-        <div class="sticker-badge" style="bottom: 10%; right: 48%;">茨城<br>全域</div>
-
-        <!-- 幾何学スタンプ -->
-        <div class="memphis-stamp plus spin" style="top: 10%; left: 32%;"></div>
-        <div class="memphis-stamp circle float-slow" style="top: 22%; right: 42%;"></div>
-        <div class="memphis-stamp waves" style="bottom: 8%; left: 15%;"></div>
-        <div class="memphis-stamp dots" style="top: 40%; left: 4%;"></div>
-        
-        <div style="position: relative; z-index: 2;">
-          <span class="page-mark">CONTACT</span>
-          <h1>人材の相談、仕事探しの相談はこちら。</h1>
-          <p>企業担当者の方、働きたい外国人の方、どちらもまずは電話またはメールでご相談ください。</p>
-        </div>
-        <aside class="hero-aside-card" aria-label="お問い合わせ前のご案内">
-          <figure class="hero-aside-media">
-            <img src="assets/worker-support.png" alt="">
-          </figure>
-          <div class="hero-aside-copy">
-            <span>START HERE</span>
-            <strong>まずは一度、状況を聞かせてください。</strong>
-            <p>募集したい仕事、働ける時間、希望条件を整理しながら進めます。</p>
-          </div>
-        </aside>
+      <section class="page-hero contact-hero">
+        <span class="page-mark">CONTACT</span>
+        <h1>人材の相談、仕事探しの相談はこちら。</h1>
+        <p>企業担当者の方、働きたい外国人の方、どちらもまずは電話またはメールでご相談ください。</p>
       </section>
 
-      <section class="section contact-layout bg-grid-pattern" style="position: relative;" data-animate>
-        <!-- 幾何学スタンプ -->
-        <div class="memphis-stamp plus float-slow" style="top: 10%; left: 4%;"></div>
-        <div class="memphis-stamp double-circle spin" style="bottom: 12%; right: 4%;"></div>
-        
-        <div class="contact-card large" style="position: relative; z-index: 2; overflow: hidden;">
-          <div class="card-watermark" style="font-size: 8rem; bottom: -20px; right: 10px; opacity: 0.6;">📞</div>
+      <section class="section contact-layout">
+        <div class="contact-card large">
           <h2>電話で相談</h2>
           <a class="phone" href="tel:0299945517">0299-94-5517</a>
           <p>受付時に「人材センターの件」とお伝えください。</p>
@@ -90,16 +56,15 @@
             <div><dt>所在地</dt><dd>茨城県稲敷市六角262番地</dd></div>
           </dl>
         </div>
-        <form class="contact-form" data-mail-form style="position: relative; z-index: 2; overflow: hidden;">
-          <div class="card-watermark" style="font-size: 8rem; bottom: -20px; right: 10px; opacity: 0.6;">✉</div>
+        <form class="contact-form" data-mail-form>
           <h2>メール相談フォーム</h2>
           <label>相談種別<select name="type"><option>企業として人材を相談したい</option><option>仕事を探したい</option><option>法令・業務範囲を確認したい</option></select></label>
           <label>お名前・会社名<input name="name" required></label>
           <label>電話番号<input name="tel"></label>
           <label>メールアドレス<input name="email" type="email"></label>
           <label>相談内容<textarea name="message" rows="6" required></textarea></label>
-          <button class="button primary" type="submit" data-submit-btn>送信する</button>
-          <div class="form-status" data-form-status role="status" aria-live="polite" style="margin-top: 1rem; font-weight: bold; min-height: 1.5em; text-align: center;"></div>
+          <button class="button primary" type="submit">メールを作成する</button>
+          <p class="form-note">送信ボタンでメールソフトが起動します。内容を確認して送信してください。</p>
         </form>
       </section>
     </main>
@@ -107,11 +72,9 @@
       <div class="footer-main">
         <a class="footer-brand" href="index.html">稲建人材センター</a>
         <p>外国人材と地域企業を、法令確認を前提に適切な仕事へつなぐ人材サービス。</p>
-        <div>
-          <span id="staff-version-display" class="staff-version-display">v1.0.12</span>
-        </div>
       </div>
       <div class="footer-links">
+        <a href="https://yuji37.github.io/inaken/">有限会社稲建</a>
         <a href="services.html">サービス</a>
         <a href="companies.html">企業の方へ</a>
         <a href="workers.html">働きたい方へ</a>
@@ -124,6 +87,6 @@
         TEL <a href="tel:0299945517">0299-94-5517</a>
       </address>
     </footer>
-    <script src="script_v1_3_14.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
