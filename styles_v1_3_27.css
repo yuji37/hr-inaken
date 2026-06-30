@@ -11,7 +11,15 @@
   --shadow: 0 22px 55px rgba(16, 32, 43, .13);
 }
 * { box-sizing: border-box; min-width: 0; }
-html { scroll-behavior: smooth; }
+html {
+  font-size: 16px;
+  transition: font-size 0.2s ease;
+  scroll-behavior: smooth;
+}
+
+html.font-size-small { font-size: 14px; }
+html.font-size-medium { font-size: 16px; }
+html.font-size-large { font-size: 20px; }
 body {
   margin: 0;
   color: var(--ink);
