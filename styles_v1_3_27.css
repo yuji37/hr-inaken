@@ -46,7 +46,7 @@ img { max-width: 100%; display: block; }
 .nav a { display: grid; gap: 0; padding: 10px 0; color: #253543; border-bottom: 2px solid transparent; font-weight: 800; font-size: 0.8125rem; text-align: center; }
 .nav a small { color: var(--muted); font-size: 0.5625rem; letter-spacing: .08em; font-weight: 700; }
 .nav a[aria-current="page"], .nav a:hover { color: var(--green); border-color: var(--gold); }
-.header-cta, .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 4px; font-weight: 900; border: 1px solid transparent; line-height: 1; }
+.header-cta, .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 8px 22px; border-radius: 4px; font-weight: 900; border: 1px solid transparent; line-height: 1.2; }
 .header-cta, .button.primary { color: #fff; background: var(--green); }
 .button.secondary { color: var(--green); background: #fff; border-color: var(--line); }
 .menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: #fff; border-radius: 4px; }
