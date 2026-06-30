@@ -568,3 +568,67 @@ address { font-style: normal; }
     margin-top: 6px !important;
   }
 }
+
+/* --- font-size-control スタイル (カプセル型) --- */
+.font-size-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0; /* 隙間なし */
+  background: #faf8f5; /* 非常に薄いベージュ */
+  padding: 0;
+  border-radius: 30px; /* カプセル型 */
+  border: 1px solid #e2ded5;
+  overflow: hidden;
+  margin-left: 12px;
+}
+
+.font-size-btn {
+  border: none;
+  background: transparent;
+  color: #767064; /* 少し落ち着いたカラー */
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 500;
+  line-height: 1;
+  transition: all 0.15s ease;
+}
+
+/* ボタン間に縦の区切り線を引く */
+.font-size-btn:not(:first-child) {
+  border-left: 1px solid #e2ded5;
+  border-radius: 0;
+}
+
+.font-size-btn:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: #2c2924;
+}
+
+/* アクティブなボタンのスタイル */
+.font-size-btn.is-active {
+  font-weight: 800; /* 太字 */
+  color: #1a1815;   /* 濃い黒 */
+  background: rgba(0, 0, 0, 0.05); /* 微妙に背景を濃くする */
+}
+
+/* モバイル対応の調整 */
+@media (max-width: 900px) {
+  .font-size-control {
+    margin-right: 12px;
+  }
+}
+
+/* 追加: 配置の調整 */
+.site-nav {
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    margin-left: 0;
+  }
+  .font-size-control {
+    margin-left: auto;
+  }
+}
