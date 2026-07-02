@@ -43,7 +43,6 @@ if (form) {
         // Send form data asynchronously to GAS
         fetch(GAS_API_URL, {
           method: "POST",
-          mode: "no-cors", // Bypasses CORS issues common with GAS Web App redirects
           headers: {
             "Content-Type": "application/json"
           },
@@ -55,6 +54,9 @@ if (form) {
             statusDiv.style.color = "green";
           }
           form.reset();
+          if (submitBtn) {
+            submitBtn.style.display = "none"; // 送信成功時はボタンを非表示にして連打防止
+          }
         })
         .catch((error) => {
           console.error("Submission error:", error);
@@ -62,8 +64,6 @@ if (form) {
             statusDiv.textContent = "送信中にエラーが発生しました。お電話にてお問い合わせください。";
             statusDiv.style.color = "#c00000"; // Deep red (rules 8)
           }
-        })
-        .finally(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.textContent = "送信する";
