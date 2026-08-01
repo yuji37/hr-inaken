@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Version: v1.0.37 -->
+<!-- Version: v1.0.38 -->
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -73,7 +73,7 @@
             <div><dt>所在地</dt><dd>茨城県稲敷市結佐2620-2</dd></div>
           </dl>
         </div>
-        <form class="contact-form" data-mail-form>
+        <form class="contact-form" data-mail-form onsubmit="if(window.handleFormSubmit){window.handleFormSubmit(event);}else{event.preventDefault();}return false;">
           <h2>お問い合わせ・求人ご依頼フォーム</h2>
           <label>相談種別<select name="type" id="type-select" onchange="var f=document.getElementById('doc-upload-fieldset');if(f){f.style.display=this.value.includes('仕事を探したい')?'block':'none';}"><option value="仕事を探したい">仕事を探したい</option><option value="企業として人材を相談したい">企業として人材を相談したい</option><option value="法令・業務範囲を確認したい">法令・業務範囲を確認したい</option></select></label>
           <label>お名前・会社名<input name="name" required></label>
@@ -144,6 +144,6 @@
       </address>
     </footer>
     <script src="https://www.google.com/recaptcha/api.js?render=6LeDLzotAAAAAP1iaZhwhhdH1zfldN_fMGAuXQR6"></script>
-    <script src="script_v1_0_37.js"></script>
+    <script src="script_v1_0_38.js"></script>
   </body>
 </html>
