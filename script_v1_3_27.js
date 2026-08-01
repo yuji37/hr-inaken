@@ -43,8 +43,9 @@ if (form) {
         // Send form data asynchronously to GAS
         fetch(GAS_API_URL, {
           method: "POST",
+          mode: "no-cors",
           headers: {
-            "Content-Type": "text/plain;charset=utf-8"
+            "Content-Type": "text/plain"
           },
           body: JSON.stringify(payload)
         })
