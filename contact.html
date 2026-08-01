@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Version: v1.0.34 -->
+<!-- Version: v1.0.35 -->
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -75,7 +75,7 @@
         </div>
         <form class="contact-form" data-mail-form>
           <h2>お問い合わせ・求人ご依頼フォーム</h2>
-          <label>相談種別<select name="type"><option>企業として人材を相談したい</option><option>仕事を探したい</option><option>法令・業務範囲を確認したい</option></select></label>
+          <label>相談種別<select name="type" onchange="var f=document.getElementById('doc-upload-fieldset');if(f){f.style.display=this.value.includes('仕事を探したい')?'block':'none';}"><option>企業として人材を相談したい</option><option>仕事を探したい</option><option>法令・業務範囲を確認したい</option></select></label>
           <label>お名前・会社名<input name="name" required></label>
           <label>電話番号<input name="tel"></label>
           <label>メールアドレス<input name="email" type="email"></label>
@@ -144,6 +144,6 @@
       </address>
     </footer>
     <script src="https://www.google.com/recaptcha/api.js?render=6LeDLzotAAAAAP1iaZhwhhdH1zfldN_fMGAuXQR6"></script>
-    <script src="script_v1_0_34.js"></script>
+    <script src="script_v1_0_35.js"></script>
   </body>
 </html>
