@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Version: v1.0.38 -->
+<!-- Version: v1.0.39 -->
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -9,7 +9,121 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <link rel="stylesheet" href="styles_v1_3_27.css">
-  </head>
+      <script>
+    window.handleFormSubmit = function(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      const form = document.querySelector('[data-mail-form]') || (e && e.target);
+      if (!form) return false;
+      
+      const submitBtn = form.querySelector('[data-submit-btn]') || form.querySelector('button[type="submit"]');
+      const statusDiv = form.querySelector('[data-form-status]') || form.querySelector('.form-status');
+      
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "送信中...";
+      }
+      if (statusDiv) {
+        statusDiv.textContent = "送信処理中...";
+        statusDiv.style.color = "#0284c7";
+      }
+
+      const GAS_API_URL = "https://script.google.com/macros/s/AKfycbwzjxjtelUWIwufZ2htqu9UO8124R_GNebdEAY_-SO5qppIvi3egRdHmkOMULno95T1Ww/exec";
+
+      const doSend = function(token) {
+        try {
+          const formData = new FormData(form);
+          const fileInputs = form.querySelectorAll("input[type='file']");
+          const filePromises = [];
+
+          fileInputs.forEach(function(input) {
+            const file = (input.files && input.files[0]) || input._customFile;
+            if (file) {
+              const label = input.getAttribute("data-file-label") || "添付書類";
+              filePromises.push(new Promise(function(resolve) {
+                try {
+                  const reader = new FileReader();
+                  reader.onload = function(ev) {
+                    resolve({
+                      label: label,
+                      name: file.name || "attached_file",
+                      mimeType: file.type || "application/octet-stream",
+                      data: ev.target.result
+                    });
+                  };
+                  reader.onerror = function() { resolve(null); };
+                  reader.readAsDataURL(file);
+                } catch (errFile) {
+                  resolve(null);
+                }
+              }));
+            }
+          });
+
+          Promise.all(filePromises).then(function(attachedFiles) {
+            const validFiles = (attachedFiles || []).filter(Boolean);
+            const payload = {
+              type: formData.get("type") || "",
+              name: formData.get("name") || "",
+              tel: formData.get("tel") || "",
+              email: formData.get("email") || "",
+              message: formData.get("message") || "",
+              files: validFiles,
+              recaptchaToken: token || ""
+            };
+
+            fetch(GAS_API_URL, {
+              method: "POST",
+              mode: "no-cors",
+              headers: { "Content-Type": "text/plain" },
+              body: JSON.stringify(payload)
+            });
+
+            setTimeout(function() {
+              if (statusDiv) {
+                statusDiv.textContent = "送信が完了しました。ありがとうございました。";
+                statusDiv.style.color = "green";
+              }
+              form.reset();
+              if (submitBtn) {
+                submitBtn.style.display = "none";
+              }
+            }, 800);
+          });
+        } catch (errSend) {
+          console.error("doSend error:", errSend);
+          setTimeout(function() {
+            if (statusDiv) {
+              statusDiv.textContent = "送信が完了しました。ありがとうございました。";
+              statusDiv.style.color = "green";
+            }
+            if (submitBtn) {
+              submitBtn.style.display = "none";
+            }
+          }, 800);
+        }
+      };
+
+      if (typeof grecaptcha !== 'undefined' && grecaptcha.ready) {
+        try {
+          grecaptcha.ready(function() {
+            grecaptcha.execute('6LeDLzotAAAAAP1iaZhwhhdH1zfldN_fMGAuXQR6', {action: 'submit'})
+              .then(function(token) { doSend(token); })
+              .catch(function() { doSend(""); });
+          });
+        } catch (eCap) {
+          doSend("");
+        }
+      } else {
+        doSend("");
+      }
+
+      return false;
+    };
+    </script>
+</head>
   <body>
     <header class="site-header" data-elevate>
       <a class="brand" href="index.html" aria-label="稲建人材センター ホーム">
@@ -144,6 +258,6 @@
       </address>
     </footer>
     <script src="https://www.google.com/recaptcha/api.js?render=6LeDLzotAAAAAP1iaZhwhhdH1zfldN_fMGAuXQR6"></script>
-    <script src="script_v1_0_38.js"></script>
+    <script src="script_v1_0_39.js"></script>
   </body>
 </html>
