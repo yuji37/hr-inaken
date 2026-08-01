@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Version: v1.0.36 -->
+<!-- Version: v1.0.37 -->
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -75,12 +75,12 @@
         </div>
         <form class="contact-form" data-mail-form>
           <h2>お問い合わせ・求人ご依頼フォーム</h2>
-          <label>相談種別<select name="type" onchange="var f=document.getElementById('doc-upload-fieldset');if(f){f.style.display=this.value.includes('仕事を探したい')?'block':'none';}"><option>企業として人材を相談したい</option><option>仕事を探したい</option><option>法令・業務範囲を確認したい</option></select></label>
+          <label>相談種別<select name="type" id="type-select" onchange="var f=document.getElementById('doc-upload-fieldset');if(f){f.style.display=this.value.includes('仕事を探したい')?'block':'none';}"><option value="仕事を探したい">仕事を探したい</option><option value="企業として人材を相談したい">企業として人材を相談したい</option><option value="法令・業務範囲を確認したい">法令・業務範囲を確認したい</option></select></label>
           <label>お名前・会社名<input name="name" required></label>
           <label>電話番号<input name="tel"></label>
           <label>メールアドレス<input name="email" type="email"></label>
           <label>相談内容<textarea name="message" rows="6" required></textarea></label>
-                    <fieldset id="doc-upload-fieldset" style="display: none; border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; margin-bottom: 1rem; background-color: #f8fafc;">
+                    <fieldset id="doc-upload-fieldset" style="display: block; border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; margin-bottom: 1rem; background-color: #f8fafc;">
             <legend style="font-weight: bold; color: #1e3a8a; padding: 0 0.5rem; font-size: 0.95rem;">各種書類の添付（任意 / ドラッグ＆ドロップ対応）</legend>
             <p style="font-size: 0.8rem; color: #64748b; margin-top: 0; margin-bottom: 1rem;">※個人の求職者の方、またはご相談時に書類をお持ちの場合は添付が可能です（PDF/画像/Word/Excel等、各5MBまで）。ファイル選択ボタン、または点線枠内への投げ込み（ドラッグ＆ドロップ）に対応しています。</p>
             <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
@@ -144,6 +144,6 @@
       </address>
     </footer>
     <script src="https://www.google.com/recaptcha/api.js?render=6LeDLzotAAAAAP1iaZhwhhdH1zfldN_fMGAuXQR6"></script>
-    <script src="script_v1_0_36.js"></script>
+    <script src="script_v1_0_37.js"></script>
   </body>
 </html>
