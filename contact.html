@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Version: v1.0.29 -->
+<!-- Version: v1.0.30 -->
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -80,30 +80,40 @@
           <label>電話番号<input name="tel"></label>
           <label>メールアドレス<input name="email" type="email"></label>
           <label>相談内容<textarea name="message" rows="6" required></textarea></label>
-                    <fieldset style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 1rem; margin-top: 1rem; margin-bottom: 1rem; background-color: #f8fafc;">
-            <legend style="font-weight: bold; color: #1e3a8a; padding: 0 0.5rem; font-size: 0.95rem;">各種書類の添付（任意）</legend>
-            <p style="font-size: 0.8rem; color: #64748b; margin-top: 0; margin-bottom: 0.75rem;">※個人の求職者の方、またはご相談時に書類をお持ちの場合は添付が可能です（PDF/画像/Word/Excel等、各5MBまで）。</p>
-            <div style="display: grid; grid-template-columns: 1fr; gap: 0.75rem;">
-              <label style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.25rem;">
-                <strong>パスポート (PDF/画像)</strong>
-                <input type="file" name="file_passport" accept=".pdf,image/*" data-file-label="パスポート" style="font-size: 0.8rem;">
-              </label>
-              <label style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.25rem;">
-                <strong>在留カード (画像/PDF)</strong>
-                <input type="file" name="file_residence_card" accept=".pdf,image/*" data-file-label="在留カード" style="font-size: 0.8rem;">
-              </label>
-              <label style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.25rem;">
-                <strong>履歴書 (PDF/Word/Excel/画像)</strong>
-                <input type="file" name="file_resume" accept=".pdf,.doc,.docx,.xls,.xlsx,image/*" data-file-label="履歴書" style="font-size: 0.8rem;">
-              </label>
-              <label style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.25rem;">
-                <strong>職務経歴書 (PDF/Word/Excel/画像)</strong>
-                <input type="file" name="file_career_history" accept=".pdf,.doc,.docx,.xls,.xlsx,image/*" data-file-label="職務経歴書" style="font-size: 0.8rem;">
-              </label>
-              <label style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.25rem;">
-                <strong>運転免許証 (画像/PDF)</strong>
-                <input type="file" name="file_driver_license" accept=".pdf,image/*" data-file-label="運転免許証" style="font-size: 0.8rem;">
-              </label>
+                    <fieldset style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 1.25rem; margin-top: 1rem; margin-bottom: 1rem; background-color: #f8fafc;">
+            <legend style="font-weight: bold; color: #1e3a8a; padding: 0 0.5rem; font-size: 0.95rem;">各種書類の添付（任意 / ドラッグ＆ドロップ対応）</legend>
+            <p style="font-size: 0.8rem; color: #64748b; margin-top: 0; margin-bottom: 1rem;">※個人の求職者の方、またはご相談時に書類をお持ちの場合は添付が可能です（PDF/画像/Word/Excel等、各5MBまで）。ファイル選択ボタン、または点線枠内への投げ込み（ドラッグ＆ドロップ）に対応しています。</p>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+              <div class="drop-zone" data-drop-zone style="border: 2px dashed #cbd5e1; border-radius: 6px; padding: 0.75rem 1rem; background: #ffffff; text-align: center; cursor: pointer; transition: all 0.2s ease;">
+                <span style="font-size: 0.85rem; font-weight: bold; color: #334155; display: block; margin-bottom: 0.25rem;">パスポート (PDF/画像)</span>
+                <span style="font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 0.5rem;">ここにファイルをドラッグ＆ドロップ、またはクリックして選択</span>
+                <input type="file" name="file_passport" accept=".pdf,image/*" data-file-label="パスポート" style="font-size: 0.8rem; display: inline-block;">
+                <div class="file-name-display" style="margin-top: 0.4rem; font-size: 0.8rem; font-weight: bold; color: #0284c7;"></div>
+              </div>
+              <div class="drop-zone" data-drop-zone style="border: 2px dashed #cbd5e1; border-radius: 6px; padding: 0.75rem 1rem; background: #ffffff; text-align: center; cursor: pointer; transition: all 0.2s ease;">
+                <span style="font-size: 0.85rem; font-weight: bold; color: #334155; display: block; margin-bottom: 0.25rem;">在留カード (画像/PDF)</span>
+                <span style="font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 0.5rem;">ここにファイルをドラッグ＆ドロップ、またはクリックして選択</span>
+                <input type="file" name="file_residence_card" accept=".pdf,image/*" data-file-label="在留カード" style="font-size: 0.8rem; display: inline-block;">
+                <div class="file-name-display" style="margin-top: 0.4rem; font-size: 0.8rem; font-weight: bold; color: #0284c7;"></div>
+              </div>
+              <div class="drop-zone" data-drop-zone style="border: 2px dashed #cbd5e1; border-radius: 6px; padding: 0.75rem 1rem; background: #ffffff; text-align: center; cursor: pointer; transition: all 0.2s ease;">
+                <span style="font-size: 0.85rem; font-weight: bold; color: #334155; display: block; margin-bottom: 0.25rem;">履歴書 (PDF/Word/Excel/画像)</span>
+                <span style="font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 0.5rem;">ここにファイルをドラッグ＆ドロップ、またはクリックして選択</span>
+                <input type="file" name="file_resume" accept=".pdf,.doc,.docx,.xls,.xlsx,image/*" data-file-label="履歴書" style="font-size: 0.8rem; display: inline-block;">
+                <div class="file-name-display" style="margin-top: 0.4rem; font-size: 0.8rem; font-weight: bold; color: #0284c7;"></div>
+              </div>
+              <div class="drop-zone" data-drop-zone style="border: 2px dashed #cbd5e1; border-radius: 6px; padding: 0.75rem 1rem; background: #ffffff; text-align: center; cursor: pointer; transition: all 0.2s ease;">
+                <span style="font-size: 0.85rem; font-weight: bold; color: #334155; display: block; margin-bottom: 0.25rem;">職務経歴書 (PDF/Word/Excel/画像)</span>
+                <span style="font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 0.5rem;">ここにファイルをドラッグ＆ドロップ、またはクリックして選択</span>
+                <input type="file" name="file_career_history" accept=".pdf,.doc,.docx,.xls,.xlsx,image/*" data-file-label="職務経歴書" style="font-size: 0.8rem; display: inline-block;">
+                <div class="file-name-display" style="margin-top: 0.4rem; font-size: 0.8rem; font-weight: bold; color: #0284c7;"></div>
+              </div>
+              <div class="drop-zone" data-drop-zone style="border: 2px dashed #cbd5e1; border-radius: 6px; padding: 0.75rem 1rem; background: #ffffff; text-align: center; cursor: pointer; transition: all 0.2s ease;">
+                <span style="font-size: 0.85rem; font-weight: bold; color: #334155; display: block; margin-bottom: 0.25rem;">運転免許証 (画像/PDF)</span>
+                <span style="font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 0.5rem;">ここにファイルをドラッグ＆ドロップ、またはクリックして選択</span>
+                <input type="file" name="file_driver_license" accept=".pdf,image/*" data-file-label="運転免許証" style="font-size: 0.8rem; display: inline-block;">
+                <div class="file-name-display" style="margin-top: 0.4rem; font-size: 0.8rem; font-weight: bold; color: #0284c7;"></div>
+              </div>
             </div>
           </fieldset>
           <button class="button primary" type="submit" data-submit-btn>送信する</button>
@@ -134,6 +144,6 @@
       </address>
     </footer>
     <script src="https://www.google.com/recaptcha/api.js?render=6LeDLzotAAAAAP1iaZhwhhdH1zfldN_fMGAuXQR6"></script>
-    <script src="script_v1_0_29.js"></script>
+    <script src="script_v1_0_30.js"></script>
   </body>
 </html>
